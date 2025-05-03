@@ -16,7 +16,10 @@
     "customizations": {
         "vscode": {
             "settings": {},
-            "extensions": []
+            "extensions": [
+                "angular.ng-template",
+                "esbenp.prettier-vscode"
+            ]
         }
     },
 
@@ -26,5 +29,7 @@
             "label": "aac-frontend",
             "onAutoForward": "notify"
         }
-    }
+    },
+
+    "overrideCommand": false
 }
