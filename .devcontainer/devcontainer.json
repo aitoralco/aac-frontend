@@ -1,0 +1,30 @@
+//Todo va dentro de los corchetes iniciales
+{
+    //Nombre dle container
+    "name": "aac-frontend-devcontainer",
+    
+    //Le decimos que buildee lo del dockerfile, la otra opción es que use una imagen 
+    "build": {
+        // La ruta es relativa al devcontainers.json
+        "dockerfile": "../Dockerfile"
+    },
+
+    //Cosas a añadir al dev container
+    "features": {},
+
+    //Herramientas especificas
+    "customizations": {
+        "vscode": {
+            "settings": {},
+            "extensions": []
+        }
+    },
+
+    //Para modificar los puertos y poder conectarse desde el exterior
+    "portsAttributes": {
+        "4200": {
+            "label": "aac-frontend",
+            "onAutoForward": "notify"
+        }
+    }
+}
