@@ -29,7 +29,8 @@
             "label": "aac-frontend",
             "onAutoForward": "notify"
         }
-    },
+    }
 
-    "overrideCommand": false
+    //Hace que se puedan usar los CMD del Dockerfile
+    //"overrideCommand": false
 }

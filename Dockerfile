@@ -1,6 +1,6 @@
 #Pilla la imagen de microsoft de ubuntu
 # FROM ubuntu:22.04
-FROM node:22-slim
+FROM node:22
 
 #instala paquete zx-utils
 #RUN apt-get update && apt-get install -y \
@@ -21,8 +21,8 @@ RUN npm install -g @angular/cli
 # Setup del proyecto
 WORKDIR /app
 COPY . .
-RUN npm install
-EXPOSE 4200
+# RUN npm install
+EXPOSE 4200 49153
 
 #For the dockerfile CMD to work it has to be allowed by the devcontainers.json
 CMD ["npm", "start"]
