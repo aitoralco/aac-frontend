@@ -1,18 +1,17 @@
-//Todo va dentro de los corchetes iniciales
 {
-    //Nombre dle container
-    "name": "aac-frontend-devcontainer",
+    //Container name
+    "name": "aac-frontend-devcontainer", //change this to the name of your contianer
     
-    //Le decimos que buildee lo del dockerfile, la otra opción es que use una imagen 
+    // we can either build the dockerfile or use an image, in this case build from dockerfile
     "build": {
-        // La ruta es relativa al devcontainers.json
+        // relative path to the dockerfile
         "dockerfile": "../Dockerfile"
     },
 
-    //Cosas a añadir al dev container
+    //stuff to add to the container
     "features": {},
 
-    //Herramientas especificas
+    //specific tools you want in the devcontainer
     "customizations": {
         "vscode": {
             "settings": {},
@@ -23,14 +22,14 @@
         }
     },
 
-    //Para modificar los puertos y poder conectarse desde el exterior
+    //To open ports and be able to connect to the app
     "portsAttributes": {
         "4200": {
-            "label": "aac-frontend",
+            "label": "aac-frontend", // change this to the name of your app
             "onAutoForward": "notify"
         }
     }
 
-    //Hace que se puedan usar los CMD del Dockerfile
+    //To allow dockerfile CMD commands
     //"overrideCommand": false
 }
